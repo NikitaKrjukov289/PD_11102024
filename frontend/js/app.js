@@ -7,11 +7,11 @@ window.onload = function() {
         let token = formData.get('token');
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/user', {
+            const response = await fetch('http://127.0.0.1:8000/api/user', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/html'
+                    'Content-Type': 'application/json'
                 }
             });
 
@@ -36,7 +36,7 @@ window.onload = function() {
         let token = formData.get('token');
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/posts', {
+            const response = await fetch('http://127.0.0.1:8000/api/posts', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -66,8 +66,8 @@ window.onload = function() {
 
     async function fetchAllPosts(token) {
         try {
-            const response = await fetch('http://127.0.0.1:8000/posts', {
-                method: 'POST',
+            const response = await fetch('http://127.0.0.1:8000/api/posts', {
+                method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json'

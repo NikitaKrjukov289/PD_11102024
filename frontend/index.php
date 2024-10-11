@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Front</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1>Laravel API frontend</h1>
 
     <div class="container">
         <h2>Get user</h2>
-        <form action="/api/user" method="get" id="get-user-form">
+        <form id="get-user-form">
             <label for="token">Token</label>
             <input type="text" name="token" id="token">
 
@@ -20,7 +21,7 @@
 
     <div class="container">
         <h2>Create post</h2>
-        <form action="/api/posts" method="post" id="create-post-form">
+        <form id="create-post-form">
             <label for="token">Token</label>
             <input type="text" name="token" id="token">
 
@@ -38,5 +39,6 @@
         <h2>Posts</h2>
         <div id="user-posts"></div>
     </div>
+    <script src="js/app.js"></script>
 </body>
 </html>
