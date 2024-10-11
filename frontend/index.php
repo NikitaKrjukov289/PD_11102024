@@ -17,7 +17,7 @@
 
             <input type="submit" value="Get">
         </form>
-    </div>
+    </div id="user-data"></div>
 
     <div class="container">
         <h2>Create post</h2>
