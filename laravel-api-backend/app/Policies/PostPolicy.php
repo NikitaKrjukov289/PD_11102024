@@ -10,6 +10,12 @@ class PostPolicy
 {
     public function modify(User $user, Post $post): Response
     {
-        return $user->id === $post->user_id ? Response::deny("You do not own this post") : Response::allow();
+        if($user->id === $post->user_id) 
+        {
+            $this->deny('You do not own this post.');
+        }
+    
+        return true;
+        }
     }
-}
+
